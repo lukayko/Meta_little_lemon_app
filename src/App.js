@@ -11,12 +11,11 @@ function App() {
   return (
     <>
       <Header />
-      <Main>
-        <HeroSection />
-        <ChefSection />
-        <Menu />
-        <TableOrder />
-      </Main>
+      <Main />
+      <HeroSection />
+      <ChefSection />
+      <Menu />
+      <TableOrder />
       <Footer />
     </>
   );
