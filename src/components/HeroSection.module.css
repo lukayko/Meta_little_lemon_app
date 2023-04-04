@@ -1,0 +1,41 @@
+.wrapper {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid red;
+  background-color: #495e57;
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  color: #f4ce14;
+  font-family: "Markazi Text", sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  padding: 50px;
+}
+
+.button {
+  width: 400px;
+  height: 80px;
+  background-color: #f4ce14;
+  border-radius: 8px;
+  color: #495e57;
+  font-size: 40px;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button a {
+  background-color: #f4ce14;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  box-shadow: 8px;
+}

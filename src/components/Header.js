@@ -4,8 +4,8 @@ import logo from "../assets/Logo.svg";
 
 function Header() {
   return (
-    <div class={HeaderCSS.navbar_wrapper}>
-      <div class={HeaderCSS.logo}>
+    <div className={HeaderCSS.navbar_wrapper}>
+      <div className={HeaderCSS.logo}>
         <img src={logo} />
       </div>
       <nav>
