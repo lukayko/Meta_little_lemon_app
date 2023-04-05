@@ -1,6 +1,59 @@
 .wrapper {
   width: 100%;
   height: 55vh;
-  border: 1px solid red;
   margin-top: 20vh;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  color: #333333;
+  font-size: 20px;
+}
+
+.leftContainer {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5vh;
+  padding-right: 1vw;
+}
+
+.leftContainer > p {
+  padding: 1.5vh 2.5vw 0 2.5vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.chefPhoto {
+  width: 70%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.rightContainer {
+  background-color: #fbdabb;
+  font-size: 30px;
+  border-radius: 50px;
+  height: 35%;
+  width: 100%;
+  margin-top: 15vh;
+}
+
+.rightContainer > p {
+  padding: 1.5em 3em 1.5em 3em;
+  margin: auto;
+}
+
+.chefSignature {
+  left: 24vw;
+  top: -12vh;
+  position: relative;
+  width: 50%;
+  height: auto;
 }

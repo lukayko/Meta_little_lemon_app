@@ -1,0 +1,66 @@
+.wrapper {
+  width: 100%;
+  height: 65vh;
+  margin-top: 10vh;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: #333333;
+  border-radius: 80px;
+}
+
+.child {
+  width: 10%;
+  height: 100%;
+  width: 70vw;
+}
+
+.child1 {
+  width: 10%;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+h1 {
+  color: #f4ce14;
+  font-family: "Markazi Text", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  padding: 5vh 0vh 0vh 10vh;
+}
+
+.btn {
+  width: 400px;
+  height: 80px;
+  margin: 0vh 0vh 5vh 18vh;
+  background-color: #f4ce14;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  color: #495e57;
+  font-size: 40px;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  background-color: #f4ce14;
+}
+
+img {
+  width: auto;
+  height: 120%;
+  border-radius: 8px;
+  margin: 6vh 0vh 0vh 7vh;
+}
