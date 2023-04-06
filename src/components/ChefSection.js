@@ -7,7 +7,11 @@ function ChefSection() {
   return (
     <div className={ChefSectionCSS.wrapper}>
       <div className={ChefSectionCSS.leftContainer}>
-        <img src={adrianIMG} className={ChefSectionCSS.chefPhoto} />
+        <img
+          src={adrianIMG}
+          className={ChefSectionCSS.chefPhoto}
+          alt="Adrian"
+        />
         <p>Adrian, Chef and Owner of the Little Lemon</p>
       </div>
       <div className={ChefSectionCSS.rightContainer}>

@@ -13,7 +13,7 @@ function HeroSection() {
           </div>
         </div>
         <div className={HeroSectionCSS.child}>
-          <img src={saladIMG} />
+          <img src={saladIMG} alt="salad" />
         </div>
       </div>
     </div>

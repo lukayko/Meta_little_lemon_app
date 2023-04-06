@@ -7,7 +7,7 @@ function Footer() {
     <div className={FooterCSS.wrapper}>
       <div className={FooterCSS.flexParent}>
         <div className={FooterCSS.flexChild}>
-          <img src={logo} />
+          <img src={logo} alt="The Little Lemon" />
         </div>
         <div className={FooterCSS.flexChild}>
           <div className={FooterCSS.bottomNav}>

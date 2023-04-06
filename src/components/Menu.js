@@ -13,19 +13,23 @@ function Menu() {
       </div>
       <div className={MenuCSS.flexParent}>
         <div className={MenuCSS.flexChild}>
-          <img src={fish} className={MenuCSS.imgSelector} />
+          <img src={fish} className={MenuCSS.imgSelector} alt="fish food" />
           <h4>Fish</h4>
         </div>
         <div className={MenuCSS.flexChild}>
-          <img src={salad} className={MenuCSS.imgSelector} />
+          <img src={salad} className={MenuCSS.imgSelector} alt="salad" />
           <h4>Salads</h4>
         </div>
         <div className={MenuCSS.flexChild}>
-          <img src={smallFood} className={MenuCSS.imgSelector} />
+          <img
+            src={smallFood}
+            className={MenuCSS.imgSelector}
+            alt="spécialités of Little Lemon"
+          />
           <h4>Spécialités</h4>
         </div>
         <div className={MenuCSS.flexChild}>
-          <img src={dessert} className={MenuCSS.imgSelector} />
+          <img src={dessert} className={MenuCSS.imgSelector} alt="desserts" />
           <h4>Desserts</h4>
         </div>
       </div>

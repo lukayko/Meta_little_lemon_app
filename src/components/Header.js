@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className={HeaderCSS.navbar_wrapper}>
       <div className={HeaderCSS.logo}>
-        <img src={logo} />
+        <img src={logo} alt="Logo of the Little Lemon Restaurant" />
       </div>
       <nav>
         <ul>

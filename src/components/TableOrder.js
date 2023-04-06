@@ -15,7 +15,7 @@ function TableOrder() {
           </div>
         </div>
         <div className={TableOrCSS.child}>
-          <img src={restaurant} />
+          <img src={restaurant} alt="Little Lemon Restaurant" />
         </div>
       </div>
     </div>
