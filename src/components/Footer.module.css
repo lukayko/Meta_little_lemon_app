@@ -3,5 +3,36 @@
   height: 40vh;
   background-color: #495e57;
   margin-top: 30vh;
-  border: 1px solid red;
+}
+
+.flexParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+}
+.flexChild {
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  height: 80%;
+  margin: auto 0;
+}
+
+.flexChild img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  margin: auto 0;
+}
+
+.bottomNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.copyText {
+  margin-left: 13vw;
 }

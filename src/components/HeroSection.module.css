@@ -28,12 +28,13 @@
   justify-content: space-between;
 }
 
-h1 {
+.child1 h1 {
   color: #f4ce14;
   font-family: "Markazi Text", sans-serif;
   font-size: 64px;
   font-weight: 500;
   padding: 5vh 0vh 0vh 10vh;
+  text-align: center;
 }
 
 .btn {
@@ -53,7 +54,12 @@ button {
   font-size: 40px;
   font-family: "Karla", sans-serif;
   font-weight: 700;
-  background-color: #f4ce14;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+button:active {
+  background-color: #ee9972;
 }
 
 img {

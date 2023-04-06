@@ -9,3 +9,7 @@ body {
   background-color: #edefee;
   overflow-x: hidden;
 }
+
+a:hover {
+  color: #ee9972;
+}

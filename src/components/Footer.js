@@ -1,12 +1,13 @@
 import React from "react";
 import FooterCSS from "./Footer.module.css";
+import logo from "../assets/small_logo.png";
 
 function Footer() {
   return (
     <div className={FooterCSS.wrapper}>
       <div className={FooterCSS.flexParent}>
         <div className={FooterCSS.flexChild}>
-          <img />
+          <img src={logo} />
         </div>
         <div className={FooterCSS.flexChild}>
           <div className={FooterCSS.bottomNav}>
@@ -43,7 +44,7 @@ function Footer() {
           </div>
         </div>
         <div className={FooterCSS.flexChild}>
-          <p>Copyright Little Lemon 2023</p>
+          <p className={FooterCSS.copyText}>Copyright Little Lemon 2023</p>
         </div>
       </div>
     </div>
