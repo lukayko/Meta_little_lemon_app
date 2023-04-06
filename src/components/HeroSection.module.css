@@ -68,3 +68,8 @@ img {
   border-radius: 8px;
   margin: 6vh 0vh 0vh 7vh;
 }
+
+button a {
+  text-decoration: none;
+  color: #495e57;
+}

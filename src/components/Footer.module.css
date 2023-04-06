@@ -36,3 +36,15 @@
 .copyText {
   margin-left: 13vw;
 }
+
+nav div a {
+  text-decoration: none;
+}
+
+nav div a:visited {
+  color: #ffffff;
+}
+
+nav div a:hover {
+  color: #ee9972;
+}

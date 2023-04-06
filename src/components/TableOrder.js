@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TableOrCSS from "./TableOrder.module.css";
 import restaurant from "../assets/restaurant.jpg";
 
@@ -11,7 +12,9 @@ function TableOrder() {
             Let’s experience the best restaurant atmosphere you’ve ever had!
           </h1>
           <div className={TableOrCSS.btn}>
-            <button>Book a table</button>
+            <button>
+              <Link to="/table-reservation">Book a table</Link>
+            </button>
           </div>
         </div>
         <div className={TableOrCSS.child}>

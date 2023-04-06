@@ -27,3 +27,15 @@ ul {
   color: #495e57;
   list-style-type: none;
 }
+
+li a {
+  text-decoration: none;
+}
+
+li a:visited {
+  color: #495e57;
+}
+
+li a:hover {
+  color: #ee9972;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import FooterCSS from "./Footer.module.css";
 import logo from "../assets/small_logo.png";
 
@@ -7,41 +8,31 @@ function Footer() {
     <div className={FooterCSS.wrapper}>
       <div className={FooterCSS.flexParent}>
         <div className={FooterCSS.flexChild}>
-          <img src={logo} alt="The Little Lemon" />
+          <a href="#">
+            <img src={logo} alt="The Little Lemon" />
+          </a>
         </div>
         <div className={FooterCSS.flexChild}>
-          <div className={FooterCSS.bottomNav}>
+          <nav className={FooterCSS.bottomNav}>
             <div>
-              <p>
-                <a>Menu</a>
-              </p>
+              <Link to="/menu">Menu</Link>
             </div>
             <div>
-              <p>
-                <a>Order online</a>
-              </p>
+              <Link to="/online-order">Online order</Link>
             </div>
             <div>
-              <p>
-                <a>Table reservation</a>
-              </p>
+              <Link to="/table-reservation">Table reservation</Link>
             </div>
             <div>
-              <p>
-                <a>About us</a>
-              </p>
+              <Link to="/about-us">About us</Link>
             </div>
             <div>
-              <p>
-                <a>Plans for the future</a>
-              </p>
+              <Link to="/our-future">Plans for the future</Link>
             </div>
             <div>
-              <p>
-                <a>Want to open a Franchise?</a>
-              </p>
+              <Link to="/franchise-offer">Want to open a Franchise?</Link>
             </div>
-          </div>
+          </nav>
         </div>
         <div className={FooterCSS.flexChild}>
           <p className={FooterCSS.copyText}>Copyright Little Lemon 2023</p>
