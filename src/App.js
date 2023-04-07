@@ -2,13 +2,14 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import AboutUs from "./AboutUs";
-import OnlineOrder from "./OnlineOrder";
-import Reservation from "./Reservation";
-import Homepage from "./Homepage";
-import Menu from "./Menu";
-import FranchiseOffer from "./FranchiseOffer";
-import OurFuture from "./OurFuture";
+import AboutUs from "./pages/AboutUs";
+import OnlineOrder from "./pages/OnlineOrder";
+import Reservation from "./pages/Reservation";
+import Homepage from "./pages/Homepage";
+import Menu from "./pages/Menu";
+import FranchiseOffer from "./pages/FranchiseOffer";
+import OurFuture from "./pages/OurFuture";
+import ConfirmedBooking from "./pages/ConfirmedBooking";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/franchise-offer" element={<FranchiseOffer />} />
         <Route path="/our-future" element={<OurFuture />} />
+        <Route path="/confirmed-booking" element={<ConfirmedBooking />}></Route>
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import MenuCSS from "./Menu.module.css";
+import MenuCSS from "./MenuSection.module.css";
 import fish from "../assets/fish_food.jpg";
 import salad from "../assets/greek_salad.jpg";
 import smallFood from "../assets/restauranfood.jpg";

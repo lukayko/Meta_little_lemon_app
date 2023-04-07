@@ -1,0 +1,34 @@
+.wrapper {
+  border: 1px solid red;
+  padding: 0 5vw;
+  margin: auto;
+}
+
+.wrapper h1 {
+  padding: 0 10vw;
+  margin: 0 auto 5vh auto;
+  text-align: center;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexChild {
+  border: 1px solid purple;
+}
+
+label,
+input,
+option,
+select {
+  margin: 0.5em;
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  color: #333;
+}
+
+label {
+  color: #495e57;
+}
