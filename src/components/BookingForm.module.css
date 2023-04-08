@@ -1,34 +1,22 @@
 .wrapper {
-  border: 1px solid red;
-  padding: 0 5vw;
+  width: 90%;
+  height: 80vh;
   margin: auto;
-}
-
-.wrapper h1 {
-  padding: 0 10vw;
-  margin: 0 auto 5vh auto;
-  text-align: center;
+  border-radius: 80px;
+  background-color: #495e57;
+  border: 1px solid red;
 }
 
 .flexContainer {
-  display: flex;
-  flex-direction: row;
+  border: 1px solid yellow;
+  width: 50%;
+  height: 70%;
+  margin: 5vh 0 0 5vw;
 }
 
 .flexChild {
-  border: 1px solid purple;
-}
-
-label,
-input,
-option,
-select {
-  margin: 0.5em;
-  font-family: "Karla", sans-serif;
+  margin: 2em 2em 2em 0;
   font-size: 20px;
-  color: #333;
-}
-
-label {
-  color: #495e57;
+  font-family: "Karla", sans-serif;
+  color: #f4ce14;
 }
