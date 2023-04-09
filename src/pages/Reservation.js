@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useReducer } from "react";
 import BookingForm from "../components/BookingForm";
 import { fetchAPI, submitAPI } from "../api/ApiFile.js";
@@ -7,11 +8,13 @@ export default function BookingPage() {
   const [date, setDate] = useState(new Date());
 
   function initializeTimes(date) {
+    console.log(`1/ initializing new date object: ${date}`);
     return fetchAPI(date);
   }
 
   function updateTimes(date) {
     const dateObj = new Date(date);
+    console.log(`2/ updating date object with set date: ${dateObj}`);
     return fetchAPI(dateObj);
   }
 
@@ -31,6 +34,9 @@ export default function BookingPage() {
       case "UPDATE_TIMES":
         const newDate = new Date(action.payload);
         newState = updateTimes(newDate);
+        console.log(
+          `3/ updating set date with times according to the api: ${newState}`
+        );
         break;
 
       default:
@@ -40,11 +46,13 @@ export default function BookingPage() {
   }
 
   const [availableTimes, dispatch] = useReducer(reducer, initializeTimes(date));
+
   return (
     <BookingForm
       availableTimes={availableTimes}
       dispatch={dispatch}
       submitForm={submitForm}
+      initializeTimes={initializeTimes}
     />
   );
 }

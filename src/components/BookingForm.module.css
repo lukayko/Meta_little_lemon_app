@@ -1,22 +1,46 @@
 .wrapper {
-  width: 90%;
-  height: 80vh;
+  width: 40%;
+  height: auto;
   margin: auto;
   border-radius: 80px;
   background-color: #495e57;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.flexContainer {
-  border: 1px solid yellow;
-  width: 50%;
-  height: 70%;
-  margin: 5vh 0 0 5vw;
-}
-
-.flexChild {
-  margin: 2em 2em 2em 0;
-  font-size: 20px;
-  font-family: "Karla", sans-serif;
+.heading {
   color: #f4ce14;
+  font-family: "Markazi Text", sans-serif;
+  font-size: 3em;
+  font-weight: 500;
+  margin: 2.5vh auto 0.5vh auto;
+  padding: 0 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-family: "Markazi Text", sans-serif;
+  color: #f4ce14;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+input,
+select {
+  border: none;
+  background: #edefee;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-family: "Markazi Text", sans-serif;
+  font-size: 1.4em;
+  color: #333;
+}
+
+button:disabled {
+  opacity: 35%;
 }
