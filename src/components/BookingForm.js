@@ -28,6 +28,22 @@ export default function BookingForm({ availableTimes, dispatch }) {
       ),
   });
 
+  const formAuthenticate = () => {
+    console.log(values.name);
+    console.log(values.date);
+
+    if (
+      values.name !== "" &&
+      values.email !== "" &&
+      values.date !== "" &&
+      values.time !== "" &&
+      values.guests !== "" &&
+      values.occasion !== ""
+    ) {
+      return true;
+    }
+  };
+
   const onSubmit = async (values, actions) => {
     console.log(actions);
     console.log(values);
@@ -74,13 +90,13 @@ export default function BookingForm({ availableTimes, dispatch }) {
       <h1 className={BookingCSS.heading}>Let's make a reservation!</h1>
       <div className={BookingCSS.flexContainer}>
         <form onSubmit={handleSubmit} autoComplete="off">
-          <label htmlFor="name">Your name:</label>
+          <label htmlFor="name">Your name</label>
           <input
+            value={values.name}
+            onChange={handleChange}
             id="name"
             name="name"
             placeholder="Enter your name"
-            value={values.name}
-            onChange={handleChange}
             onBlur={handleBlur}
             className={errors.name && touched.name ? "input-error" : ""}
           />
@@ -88,7 +104,7 @@ export default function BookingForm({ availableTimes, dispatch }) {
             <p className="error">{errors.name}</p>
           )}
 
-          <label htmlFor="email">Your email:</label>
+          <label htmlFor="email">Your email</label>
           <input
             type="email"
             id="email"
@@ -116,32 +132,39 @@ export default function BookingForm({ availableTimes, dispatch }) {
 
           <label htmlFor="time">Choose time</label>
           <select
-            id="time "
-            name="time"
             value={values.time}
             onChange={handleChange}
+            id="time "
+            name="time"
             onBlur={handleBlur}
           >
+            <option value="">Choose...</option>
             {options}
           </select>
 
           <label htmlFor="guests">Number of guests</label>
           <input
+            value={values.guests}
+            onChange={handleChange}
             type="number"
             placeholder="1"
             min="1"
             id="guests"
             name="guests"
-            value={values.guests}
-            onChange={handleChange}
+            onBlur={handleBlur}
+            className={
+              errors.guests && values.guests === "" ? "input-error" : ""
+            }
           />
-
+          {errors.guests && touched.guests && (
+            <p className="error">{errors.guests}</p>
+          )}
           <label htmlFor="occasion">Occasion</label>
           <select
-            id="occasion"
-            name="occasion"
             value={values.occasion}
             onChange={handleChange}
+            id="occasion"
+            name="occasion"
             onBlur={handleBlur}
             className={
               errors.occasion && values.occasion === "" ? "input-error" : ""
@@ -153,9 +176,11 @@ export default function BookingForm({ availableTimes, dispatch }) {
             <option value="engagement">Engagement</option>
             <option value="date">Date</option>
           </select>
-          {errors.occasion && <p className="error">{errors.occasion}</p>}
+          {errors.occasion && touched.occasion && (
+            <p className="error">{errors.occasion}</p>
+          )}
 
-          <button disabled={isSubmitting} type="submit">
+          <button disabled="true" type="submit">
             Make a reservation
           </button>
         </form>
