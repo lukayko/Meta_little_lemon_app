@@ -28,24 +28,7 @@ export default function BookingForm({ availableTimes, dispatch }) {
       ),
   });
 
-  const formAuthenticate = () => {
-    console.log(values.name);
-    console.log(values.date);
-
-    if (
-      values.name !== "" &&
-      values.email !== "" &&
-      values.date !== "" &&
-      values.time !== "" &&
-      values.guests !== "" &&
-      values.occasion !== ""
-    ) {
-      return true;
-    }
-  };
-
   const onSubmit = async (values, actions) => {
-    console.log(actions);
     console.log(values);
     submitAPI(values);
     await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -53,26 +36,19 @@ export default function BookingForm({ availableTimes, dispatch }) {
     navigate("/confirmed-booking");
   };
 
-  const {
-    values,
-    handleBlur,
-    handleChange,
-    handleSubmit,
-    errors,
-    touched,
-    isSubmitting,
-  } = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      date: currentDate,
-      time: "",
-      guests: 1,
-      occasion: "Pick...",
-    },
-    validationSchema: basicSchema,
-    onSubmit,
-  });
+  const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
+    useFormik({
+      initialValues: {
+        name: "",
+        email: "",
+        date: currentDate,
+        time: "",
+        guests: 1,
+        occasion: "Pick...",
+      },
+      validationSchema: basicSchema,
+      onSubmit,
+    });
 
   const handleDateChange = async (e) => {
     handleChange(e);
@@ -84,6 +60,24 @@ export default function BookingForm({ availableTimes, dispatch }) {
       {time}
     </option>
   ));
+
+  const formAuthenticate =
+    values.name !== "" &&
+    values.email !== "" &&
+    values.date !== "" &&
+    values.time !== "" &&
+    values.guests !== "" &&
+    values.occasion !== "Pick...";
+
+  console.log(
+    formAuthenticate,
+    values.name,
+    values.email,
+    values.date,
+    values.time,
+    values.guests,
+    values.occasion
+  );
 
   return (
     <main className={BookingCSS.wrapper}>
@@ -180,7 +174,11 @@ export default function BookingForm({ availableTimes, dispatch }) {
             <p className="error">{errors.occasion}</p>
           )}
 
-          <button disabled="true" type="submit">
+          <button
+            disabled={!formAuthenticate}
+            type="submit"
+            aria-label="On Click"
+          >
             Make a reservation
           </button>
         </form>
